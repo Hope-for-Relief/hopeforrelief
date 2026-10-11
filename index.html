@@ -20,6 +20,9 @@
   --marigold-ink: #8A5208;
   --on-ink: #FBFAF7;
   --navy: #1C2740;
+  --purple: #4F2683;
+  --purple-fill: #4F2683;
+  --band: #4F2683;
 
   --font-display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
   --font-body: "Atkinson Hyperlegible", "Segoe UI", system-ui, sans-serif;
@@ -32,13 +35,13 @@
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     --paper: #121827; --panel: #1A2235; --ink: #EEF0F4; --ink-soft: #B3BACA;
-    --line: #2C3650; --marigold: #F0B254; --marigold-ink: #F0B254; --on-ink: #121827; --navy: #0C111C;
+    --line: #2C3650; --marigold: #F0B254; --marigold-ink: #F0B254; --on-ink: #121827; --navy: #0C111C; --purple: #C2ACEB; --purple-fill: #6A3FA8; --band: #2C1650;
     color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
   --paper: #121827; --panel: #1A2235; --ink: #EEF0F4; --ink-soft: #B3BACA;
-  --line: #2C3650; --marigold: #F0B254; --marigold-ink: #F0B254; --on-ink: #121827; --navy: #0C111C;
+  --line: #2C3650; --marigold: #F0B254; --marigold-ink: #F0B254; --on-ink: #121827; --navy: #0C111C; --purple: #C2ACEB; --purple-fill: #6A3FA8; --band: #2C1650;
   color-scheme: dark;
 }
 
@@ -65,7 +68,7 @@ a { color: inherit; }
 .section + .section { border-top: 1px solid var(--line); }
 .eyebrow {
   font-size: 0.8rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
-  color: var(--marigold-ink); margin-bottom: 14px;
+  color: var(--purple); margin-bottom: 14px;
 }
 .lede { font-size: 1.2rem; color: var(--ink-soft); max-width: 58ch; }
 .skip { position: absolute; left: -999px; top: 8px; background: var(--ink); color: var(--paper); padding: 10px 14px; z-index: 50; }
@@ -91,7 +94,7 @@ a { color: inherit; }
 .nav { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 68px; }
 .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; font-family: var(--font-display); font-weight: 700; font-size: 1.2rem; }
 .brand-mark {
-  width: 34px; height: 34px; border-radius: 50%; background: var(--marigold); color: #1C2740;
+  width: 34px; height: 34px; border-radius: 50%; background: var(--purple-fill); color: #FFFFFF;
   display: grid; place-items: center; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.02em;
 }
 .nav-links { display: flex; align-items: center; gap: 28px; list-style: none; margin: 0; padding: 0; }
@@ -161,7 +164,7 @@ a { color: inherit; }
   border: 1px solid var(--line); border-radius: var(--radius); background: var(--paper);
   padding: clamp(24px, 3vw, 36px); display: grid; gap: 18px; align-content: start; min-width: 0;
 }
-.program-tag { font-size: 0.8rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--marigold-ink); }
+.program-tag { font-size: 0.8rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--purple); }
 .program p { color: var(--ink-soft); }
 .spec { display: grid; grid-template-columns: max-content 1fr; gap: 10px 20px; margin: 4px 0 0; padding-top: 18px; border-top: 1px dashed var(--line); font-size: 0.98rem; }
 .spec dt { font-weight: 700; color: var(--ink); }
@@ -175,10 +178,10 @@ a { color: inherit; }
 .path { padding: 28px 28px 8px 0; display: grid; gap: 14px; align-content: start; min-width: 0; }
 .path + .path { padding-left: 28px; border-left: 1px solid var(--line); }
 .path p { color: var(--ink-soft); }
-.path a.more { font-weight: 700; text-decoration-color: var(--marigold); text-decoration-thickness: 2px; text-underline-offset: 5px; }
+.path a.more { font-weight: 700; text-decoration-color: var(--purple); text-decoration-thickness: 2px; text-underline-offset: 5px; }
 
 /* Team band */
-.band { background: var(--navy); color: #FBFAF7; }
+.band { background: var(--band); color: #FBFAF7; }
 .band .section { border: 0; }
 .band .eyebrow { color: #E9A23B; }
 .band .lede { color: #C7CCD8; margin-top: 14px; }
