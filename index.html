@@ -3,26 +3,29 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Hope for Relief offers free K-12 tutoring for students in financial need, run by Western University student volunteers.">
+<meta name="description" content="Hope for Relief offers free K-12 tutoring for students in London, Ontario, run by Western University student volunteers.">
 <title>Hope for Relief</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap">
 <style>
-/* Layout: single-column site, 1280px max width, left-aligned editorial sections; one marigold accent used sparingly. */
+/* Layout: single-column site, 1280px max width, left-aligned editorial sections; purple, orange, gold and slate from the HfR poster palette. */
 :root {
-  --paper: #FBFAF7;
-  --panel: #F2EFE7;
-  --ink: #1C2740;
-  --ink-soft: #4A5468;
-  --line: #DCD7CB;
-  --marigold: #E9A23B;
-  --marigold-ink: #8A5208;
-  --on-ink: #FBFAF7;
-  --navy: #1C2740;
-  --purple: #4F2683;
-  --purple-fill: #4F2683;
-  --band: #4F2683;
+  --paper: #FAF6EF;
+  --panel: #F3EBDF;
+  --ink: #2E1A47;
+  --ink-soft: #5E5170;
+  --line: #E3D9CC;
+  --gold: #E8AE50;
+  --gold-ink: #8F5E12;
+  --orange: #D9623B;
+  --orange-ink: #B24A25;
+  --slate: #3D5263;
+  --purple: #4A2C6B;
+  --purple-fill: #3A2352;
+  --band: #3A2352;
+  --cream: #F8F3EA;
+  --on-band-soft: #D3C8E0;
 
   --font-display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
   --font-body: "Atkinson Hyperlegible", "Segoe UI", system-ui, sans-serif;
@@ -34,14 +37,14 @@
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --paper: #121827; --panel: #1A2235; --ink: #EEF0F4; --ink-soft: #B3BACA;
-    --line: #2C3650; --marigold: #F0B254; --marigold-ink: #F0B254; --on-ink: #121827; --navy: #0C111C; --purple: #C2ACEB; --purple-fill: #6A3FA8; --band: #2C1650;
+    --paper: #1C1229; --panel: #251838; --ink: #F4EEF8; --ink-soft: #C9BCD8;
+    --line: #3A2B50; --gold: #F0B95E; --gold-ink: #F0B95E; --orange: #F07A50; --orange-ink: #F28A62; --slate: #8FA6B8; --purple: #CDB4EC; --purple-fill: #4A2C6B; --band: #2A1A3F; --cream: #F8F3EA; --on-band-soft: #D3C8E0;
     color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
-  --paper: #121827; --panel: #1A2235; --ink: #EEF0F4; --ink-soft: #B3BACA;
-  --line: #2C3650; --marigold: #F0B254; --marigold-ink: #F0B254; --on-ink: #121827; --navy: #0C111C; --purple: #C2ACEB; --purple-fill: #6A3FA8; --band: #2C1650;
+  --paper: #1C1229; --panel: #251838; --ink: #F4EEF8; --ink-soft: #C9BCD8;
+    --line: #3A2B50; --gold: #F0B95E; --gold-ink: #F0B95E; --orange: #F07A50; --orange-ink: #F28A62; --slate: #8FA6B8; --purple: #CDB4EC; --purple-fill: #4A2C6B; --band: #2A1A3F; --cream: #F8F3EA; --on-band-soft: #D3C8E0;
   color-scheme: dark;
 }
 
@@ -61,7 +64,7 @@ h2 { font-size: clamp(1.8rem, 3.6vw, 2.6rem); font-weight: 700; }
 h3 { font-size: 1.3rem; font-weight: 500; }
 p { margin: 0; }
 a { color: inherit; }
-:focus-visible { outline: 3px solid var(--marigold); outline-offset: 3px; border-radius: 2px; }
+:focus-visible { outline: 3px solid var(--orange); outline-offset: 3px; border-radius: 2px; }
 
 .wrap { max-width: var(--max); margin-inline: auto; padding-inline: var(--gutter); }
 .section { padding-block: var(--section); }
@@ -94,12 +97,12 @@ a { color: inherit; }
 .nav { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 68px; }
 .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; font-family: var(--font-display); font-weight: 700; font-size: 1.2rem; }
 .brand-mark {
-  width: 34px; height: 34px; border-radius: 50%; background: var(--purple-fill); color: #FFFFFF;
+  width: 34px; height: 34px; border-radius: 50%; background: var(--cream); color: var(--purple-fill); border: 2px solid var(--gold);
   display: grid; place-items: center; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.02em;
 }
 .nav-links { display: flex; align-items: center; gap: 28px; list-style: none; margin: 0; padding: 0; }
 .nav-links a { text-decoration: none; font-weight: 700; font-size: 0.97rem; color: var(--ink-soft); }
-.nav-links a:hover { color: var(--ink); text-decoration: underline; text-decoration-color: var(--marigold); text-decoration-thickness: 2px; text-underline-offset: 6px; }
+.nav-links a:hover { color: var(--ink); text-decoration: underline; text-decoration-color: var(--orange); text-decoration-thickness: 2px; text-underline-offset: 6px; }
 .nav-links .btn { min-height: 42px; padding: 10px 18px; color: var(--paper); }
 .nav-links .btn:hover { color: var(--ink); text-decoration: none; }
 .menu-toggle {
@@ -123,7 +126,7 @@ a { color: inherit; }
 .hero { padding-block: clamp(56px, 8vw, 104px) clamp(56px, 7vw, 88px); }
 .hero-grid { display: grid; grid-template-columns: 1.25fr 1fr; gap: clamp(32px, 6vw, 80px); align-items: center; }
 .hero-grid > * { min-width: 0; }
-.hero h1 .hl { background: linear-gradient(transparent 62%, color-mix(in srgb, var(--marigold) 55%, transparent) 62%); padding-inline: 2px; }
+.hero h1 .hl { color: var(--orange); }
 .hero .lede { margin-top: 22px; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
 .hero-note { margin-top: 18px; font-size: 0.95rem; color: var(--ink-soft); }
@@ -144,7 +147,7 @@ a { color: inherit; }
 .ruler span::before { content: ""; position: absolute; top: 0; left: 50%; width: 2px; height: 10px; background: var(--ink); }
 .grades-facts { list-style: none; padding: 0; margin: 26px 0 0; display: grid; gap: 14px; }
 .grades-facts li { display: grid; grid-template-columns: 22px 1fr; gap: 10px; align-items: start; }
-.tick { width: 22px; height: 22px; border-radius: 50%; background: var(--marigold); color: #1C2740; display: grid; place-items: center; font-size: 0.75rem; font-weight: 700; margin-top: 3px; }
+.tick { width: 22px; height: 22px; border-radius: 50%; background: var(--gold); color: #2E1A47; display: grid; place-items: center; font-size: 0.75rem; font-weight: 700; margin-top: 3px; }
 
 /* About */
 .split { display: grid; grid-template-columns: 1fr 1.3fr; gap: clamp(32px, 6vw, 80px); align-items: start; }
@@ -164,7 +167,7 @@ a { color: inherit; }
   border: 1px solid var(--line); border-radius: var(--radius); background: var(--paper);
   padding: clamp(24px, 3vw, 36px); display: grid; gap: 18px; align-content: start; min-width: 0;
 }
-.program-tag { font-size: 0.8rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--purple); }
+.program-tag { font-size: 0.8rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--orange-ink); }
 .program p { color: var(--ink-soft); }
 .spec { display: grid; grid-template-columns: max-content 1fr; gap: 10px 20px; margin: 4px 0 0; padding-top: 18px; border-top: 1px dashed var(--line); font-size: 0.98rem; }
 .spec dt { font-weight: 700; color: var(--ink); }
@@ -178,19 +181,22 @@ a { color: inherit; }
 .path { padding: 28px 28px 8px 0; display: grid; gap: 14px; align-content: start; min-width: 0; }
 .path + .path { padding-left: 28px; border-left: 1px solid var(--line); }
 .path p { color: var(--ink-soft); }
-.path a.more { font-weight: 700; text-decoration-color: var(--purple); text-decoration-thickness: 2px; text-underline-offset: 5px; }
+.path a.more { font-weight: 700; text-decoration-color: var(--orange); text-decoration-thickness: 2px; text-underline-offset: 5px; }
 
 /* Team band */
-.band { background: var(--band); color: #FBFAF7; }
+.band { background: var(--band); color: var(--cream); position: relative; overflow: hidden; isolation: isolate; }
+.band::before, .band::after { content: ""; position: absolute; border-radius: 50%; z-index: -1; pointer-events: none; }
+.band::before { width: clamp(180px, 22vw, 300px); aspect-ratio: 1; background: var(--orange); top: -12%; right: -6%; }
+.band::after { width: 160px; aspect-ratio: 1; background: var(--gold); bottom: -100px; left: -60px; }
 .band .section { border: 0; }
-.band .eyebrow { color: #E9A23B; }
-.band .lede { color: #C7CCD8; margin-top: 14px; }
+.band .eyebrow { color: var(--gold); }
+.band .lede { color: var(--on-band-soft); margin-top: 14px; }
 .team { list-style: none; margin: 44px 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-.member { border-top: 2px solid #E9A23B; padding-top: 18px; display: grid; gap: 4px; min-width: 0; }
+.member { border-top: 2px solid var(--gold); padding-top: 18px; display: grid; gap: 4px; min-width: 0; }
 .member-name { font-family: var(--font-display); font-weight: 700; font-size: clamp(1.3rem, 2.4vw, 1.6rem); }
-.member-role { color: #C7CCD8; }
-.member-link { justify-self: start; margin-top: 8px; color: #FBFAF7; font-weight: 700; font-size: 0.95rem; text-decoration-color: #E9A23B; text-decoration-thickness: 2px; text-underline-offset: 5px; }
-.member-link:hover { color: #E9A23B; }
+.member-role { color: var(--on-band-soft); }
+.member-link { justify-self: start; margin-top: 8px; color: var(--cream); font-weight: 700; font-size: 0.95rem; text-decoration-color: var(--gold); text-decoration-thickness: 2px; text-underline-offset: 5px; }
+.member-link:hover { color: var(--gold); }
 
 /* Volunteer */
 .steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; counter-reset: step; }
@@ -206,7 +212,7 @@ a { color: inherit; }
 .cta-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
 
 /* Placeholder marker */
-.ph { background: color-mix(in srgb, var(--marigold) 22%, transparent); border: 1px dashed var(--marigold-ink); border-radius: 3px; padding: 0 5px; font-style: italic; }
+.ph { background: color-mix(in srgb, var(--gold) 22%, transparent); border: 1px dashed var(--gold-ink); border-radius: 3px; padding: 0 5px; font-style: italic; }
 
 /* Contact */
 .contact-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 40px; }
@@ -456,7 +462,7 @@ a { color: inherit; }
         </ul>
       </nav>
     </div>
-    <p class="footer-small">© 2026 Hope for Relief. A federally and provincially recognized non-profit. <span class="ph">Charity registration number</span></p>
+    <p class="footer-small">© 2026 Hope for Relief. A federally and provincially recognized non-profit.</p>
   </div>
 </footer>
 
